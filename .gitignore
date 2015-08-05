@@ -11,3 +11,5 @@
 *.lpi
 *.lpr
 *.res
+*.compilied
+*.or

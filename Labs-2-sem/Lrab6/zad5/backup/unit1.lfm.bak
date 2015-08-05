@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 352
+  Height = 434
+  Top = 177
+  Width = 810
+  Caption = 'Form1'
+  ClientHeight = 434
+  ClientWidth = 810
+  LCLVersion = '0.9.30.2'
+  object Button2: TButton
+    Left = 430
+    Height = 28
+    Top = 387
+    Width = 139
+    Caption = 'График'
+    OnClick = Button2Click
+    TabOrder = 0
+  end
+  object Button3: TButton
+    Left = 635
+    Height = 28
+    Top = 387
+    Width = 139
+    Caption = 'Выход'
+    OnClick = Button3Click
+    TabOrder = 1
+  end
+  object Chart1: TChart
+    Left = 417
+    Height = 341
+    Top = 39
+    Width = 360
+    AxisList = <    
+      item
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.Visible = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'График'
+    )
+    Title.Visible = True
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+    object Bars: TBarSeries
+      Legend.Multiplicity = lmPoint
+      Marks.OverlapPolicy = opHideNeighbour
+      Title = 'sld'
+      BarBrush.Color = clRed
+    end
+  end
+  object SG: TStringGrid
+    Left = 20
+    Height = 341
+    Top = 39
+    Width = 353
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 0
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 205
+    Height = 18
+    Top = 12
+    Width = 364
+    Caption = 'Успеваемость студентов группы ДЦасБ1-1 на 9.06.15'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 29
+    Height = 18
+    Top = 397
+    Width = 118
+    Caption = 'Число студентов'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 162
+    Height = 27
+    Top = 387
+    Width = 80
+    OnChange = Edit1Change
+    TabOrder = 4
+  end
+end

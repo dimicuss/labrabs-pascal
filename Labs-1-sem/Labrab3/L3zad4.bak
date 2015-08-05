@@ -1,0 +1,25 @@
+program L3zad4;
+
+uses SysUtils, Math;
+
+var xn, xc, x, q, e :real;
+
+begin
+   write('Введите переменную e ');
+   readln(e);
+   write('Введите переменную q ');
+   readln(q);
+   x := sqrt(q);
+   xc := 1;
+   xn := 1/2 * (xc + (q/xc));
+   
+   while (abs(xn - xc) >= e) do
+   begin
+      xn := 1/2 * (xc + (q/xc));
+      writeln(xn);
+      xc := xn;
+   end;
+   if (x = xn)
+      then writeln('Корни совпадают')
+   else writeln('Корни не совпадают');
+end.

@@ -1,0 +1,35 @@
+object Form1: TForm1
+  Left = 461
+  Height = 458
+  Top = 177
+  Width = 397
+  Caption = 'Площадь треугольника'
+  ClientHeight = 458
+  ClientWidth = 397
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30.2'
+  object Memo: TMemo
+    Left = 58
+    Height = 341
+    Top = 31
+    Width = 280
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 58
+    Height = 35
+    Top = 411
+    Width = 81
+    Caption = 'Расчет'
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 257
+    Height = 35
+    Top = 411
+    Width = 81
+    Caption = 'Выход'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+end

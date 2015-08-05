@@ -1,0 +1,22 @@
+program zad3;
+
+uses SysUtils;
+
+var num1, num2, poly :integer;
+
+begin
+   readln(num1);
+   poly := 0;
+   num2 = num1;
+
+   while num2 > 0 do
+   begin
+      poly := poly * 10 + num mod 10;
+      num := num div 10;
+   end;
+
+   if num1 = poly
+      then writeln('This number is polyndrome')
+   else writeln('This number is not polyndrome');
+
+end.

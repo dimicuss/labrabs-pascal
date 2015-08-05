@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 612
+  Height = 459
+  Top = 241
+  Width = 567
+  Caption = 'Form1'
+  ClientHeight = 459
+  ClientWidth = 567
+  LCLVersion = '0.9.30.2'
+  object Label1: TLabel
+    Left = 8
+    Height = 18
+    Top = 8
+    Width = 114
+    Caption = 'Число столбцов'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 136
+    Height = 18
+    Top = 8
+    Width = 87
+    Caption = 'Число строк'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 328
+    Height = 18
+    Top = 8
+    Width = 134
+    Caption = 'Исходная матрица'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 288
+    Height = 18
+    Top = 216
+    Width = 208
+    Caption = 'Транспонированная матрица'
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 32
+    Height = 269
+    Top = 67
+    Width = 176
+    Font.Height = -9
+    Font.Name = 'Sans'
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object StringGrid1: TStringGrid
+    Left = 232
+    Height = 166
+    Top = 40
+    Width = 316
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 0
+    TabOrder = 1
+  end
+  object StringGrid2: TStringGrid
+    Left = 232
+    Height = 166
+    Top = 245
+    Width = 316
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 0
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 40
+    Top = 371
+    Width = 78
+    Caption = 'Старт'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 130
+    Height = 40
+    Top = 371
+    Width = 78
+    Caption = 'Выход'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Edit1: TEdit
+    Left = 30
+    Height = 27
+    Top = 32
+    Width = 48
+    TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 160
+    Height = 27
+    Top = 32
+    Width = 48
+    TabOrder = 6
+  end
+end

@@ -1,0 +1,50 @@
+program L4zad1;
+
+uses SysUtils;
+
+const
+   n = 5;
+
+type
+   arr = array[0..n] of integer;
+
+var
+   a	: arr;
+   i	: integer;
+   max	: integer;
+   min	: integer;
+   maxp	: integer;
+   minp	: integer;
+       
+begin
+   for i:= 0 to n do
+   begin
+      a[i] := i;
+   end;
+   
+   max := a[0];
+   min := a[0];
+   
+   for i:= 1 to n do
+   begin
+      if (max < a[i])
+	 then begin
+	    max := a[i];
+	    maxp := i;
+	 end;
+      
+      if (min > a[i])
+	 then begin
+	    min := a[i];
+	    minp := i;
+	 end;
+   end;
+   
+   a[minp] := max;
+   a[maxp] := min;
+
+   for i:= 0 to n do
+   begin
+      writeln(a[i]);
+   end;
+end.

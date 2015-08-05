@@ -1,0 +1,65 @@
+object Form1: TForm1
+  Left = 207
+  Height = 521
+  Top = 106
+  Width = 886
+  Caption = 'Form1'
+  ClientHeight = 521
+  ClientWidth = 886
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30.2'
+  object Chart1: TChart
+    Left = 19
+    Height = 396
+    Top = 12
+    Width = 724
+    AxisList = <    
+      item
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.Visible = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    ParentColor = False
+    object SinSeries: TLineSeries
+      Legend.UserItemsCount = 2
+      Title = 'Sin(x)'
+      LinePen.Color = clYellow
+      LinePen.Width = 5
+      Pointer.Pen.Color = clYellow
+    end
+    object CosSeries: TLineSeries
+      Title = 'Cos(x)'
+      LinePen.Color = clRed
+      LinePen.Width = 5
+      Pointer.Pen.Color = clRed
+      Pointer.Pen.Width = 5
+    end
+  end
+  object Button2: TButton
+    Left = 580
+    Height = 30
+    Top = 471
+    Width = 142
+    Caption = 'Сохранить в bmp'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 734
+    Height = 30
+    Top = 471
+    Width = 142
+    Caption = 'Выход'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+end

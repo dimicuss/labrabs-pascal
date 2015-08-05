@@ -1,0 +1,68 @@
+object Form1: TForm1
+  Left = 447
+  Height = 381
+  Top = 192
+  Width = 463
+  Caption = 'Form1'
+  ClientHeight = 381
+  ClientWidth = 463
+  Menu = MainMenu1
+  LCLVersion = '0.9.30.2'
+  object Memo: TMemo
+    Left = 53
+    Height = 262
+    Top = 77
+    Width = 338
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 36
+    top = 16
+    object FL: TMenuItem
+      Caption = 'Файл'
+      ShowAlwaysCheckable = True
+      object Open: TMenuItem
+        Caption = 'Открыть'
+        OnClick = OpenClick
+      end
+      object Save: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = SaveClick
+      end
+      object SaveAS: TMenuItem
+        Caption = 'Сохранить как'
+        OnClick = SaveASClick
+      end
+      object Ex: TMenuItem
+        Caption = 'Выход'
+        OnClick = ExClick
+      end
+    end
+    object Red: TMenuItem
+      Caption = 'Редактирование'
+      object CP: TMenuItem
+        Caption = 'Копировать'
+        OnClick = CPClick
+      end
+      object Enter: TMenuItem
+        Caption = 'Вставить'
+        OnClick = EnterClick
+      end
+    end
+    object About: TMenuItem
+      Caption = 'О программе'
+      object Autor: TMenuItem
+        Caption = 'Автор'
+        OnClick = AutorClick
+      end
+    end
+  end
+  object OD: TOpenDialog
+    left = 312
+    top = 16
+  end
+  object SD: TSaveDialog
+    left = 391
+    top = 16
+  end
+end

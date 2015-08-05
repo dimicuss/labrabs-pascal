@@ -1,0 +1,49 @@
+{$mode objfpc}
+{$static on}
+
+program sortList;
+
+uses SysUtils, Classes;
+
+type ENotExist = class(Exception);
+
+var sortMachine	: TStringList;
+   t		: text;
+   str		: string;
+   i		: integer;
+
+function lengthOfFile(var f : text) : integer;
+var len	: integer;
+begin
+   while not eof(f) do
+      read(f);
+      inc(len);
+   lengthOfFile := len;
+end; { lengthOfFile }
+
+begin
+   sortMachine := TStringList.Create;
+   assign(t, 'text.txt');
+   reset(t);
+
+   lengthOfFile(t);
+
+   while not eof(t) do
+   begin
+      readln(t, str);
+      sortMachine.add(str);
+   end;
+   close(t);
+
+   {--------------------------------------}
+   sortMachine.Sort;
+   {--------------------------------------}
+   
+   assign(t, 'sorted.txt');
+   rewrite(t);
+
+   for i := 0 to sortMachine.count - 1 do
+      writeln(t, sortMachine.strings[i]);
+   
+   close(t);      
+end.

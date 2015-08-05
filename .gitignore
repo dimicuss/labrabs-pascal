@@ -4,4 +4,10 @@
 *.o
 *.bak
 *.out
-*.exe
+*.cfg
+*.dsk
+*.ini
+*.ico
+*.lpi
+*.lpr
+*.res
